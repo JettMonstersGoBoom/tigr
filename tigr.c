@@ -2696,6 +2696,7 @@ int tigrReadChar(Tigr* bmp) {
     return c;
 }
 
+#ifndef TIGR_BUILDSHARED
 // We supply our own WinMain and just chain through to the user's
 // real entry point.
 #ifdef UNICODE
@@ -2721,7 +2722,7 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
     return main(argc, argv);
 }
 #endif
-
+#endif
 #endif // #ifndef TIGR_HEADLESS
 //////// End of inlined file: tigr_win.c ////////
 
